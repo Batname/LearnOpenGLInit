@@ -16,7 +16,7 @@ OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 
 CFLAGS := -g -std=c++0x # -Wall
 
-LIB := -lGLEW -lglfw -lGL -lX11 -lpthread -lXrandr -lXi
+LIB := -lGLEW -lglfw -lGL -lX11 -lpthread -lXrandr -lXi -lSOIL
 INC := -I include
 
 $(BIN): $(OBJECTS)
