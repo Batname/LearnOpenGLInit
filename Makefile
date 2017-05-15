@@ -14,7 +14,7 @@ SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 
-CFLAGS := -g # -Wall
+CFLAGS := -g -std=c++0x # -Wall
 
 LIB := -lGLEW -lglfw -lGL -lX11 -lpthread -lXrandr -lXi
 INC := -I include
@@ -43,4 +43,4 @@ uninstall:
 install:
 	@echo "Install ..."
 	@echo " $Q mv $(BIN) $(DESTDIR)"
-	# $Q mv $(BIN) $(DESTDIR)
+	$Q mv $(BIN) $(DESTDIR)

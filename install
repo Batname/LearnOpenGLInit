@@ -5,5 +5,5 @@ echo "Building LearnOpenGL"
 make uninstall
 make clean
 make
-make install
-make clean
+# make install
+# make clean
